@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html lang="en" class="isie ie8 oldie no-js"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="isie ie9 no-js"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<!-- Meta Tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="web dveloper, graphic design, freelancer">
+<meta name="keywords" content="Homepage, techneplus">
+<!-- Title -->
+<title>Techneplus</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon"/>
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700' rel='stylesheet' type='text/css'>
+<!-- Stylesheets -->
+<link rel='stylesheet' id='twitter-bootstrap-css' href='css/bootstrap.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='fontello-css' href='css/fontello.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='prettyphoto-css-css' href='js/prettyphoto/css/prettyPhoto.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='animation-css' href='css/animation.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='flexSlider-css' href='css/flexslider.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='perfectscrollbar-css' href='css/perfect-scrollbar-0.4.10.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='jquery-validity-css' href='css/jquery.validity.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='jquery-ui-css' href='css/jquery-ui.min.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='style-css' href='css/style.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='mobilenav-css' href='css/mobilenav.css' type='text/css' media="screen and (max-width: 838px)"/>
+<link rel="stylesheet" type="text/css" href="css/style.revslider.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="js/rs-plugin/css/settings.css" media="screen"/>
+<!-- jQuery -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- Google Maps -->
+<script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false&#038;ver=4.0'></script>
+<!--[if lt IE 9]>
+            <script>
+                document.createElement("header");
+                document.createElement("nav");
+                document.createElement("section");
+                document.createElement("article");
+                document.createElement("aside");
+                document.createElement("footer");
+                document.createElement("hgroup");
+            </script>
+        <![endif]-->
+<!--[if lt IE 9]>
+            <script src="js/html5.js"></script>
+        <![endif]-->
+<!--[if lt IE 7]>
+            <script src="js/icomoon.js"></script>
+        <![endif]-->
+<!--[if lt IE 9]>
+            <link href="css/ie.css" rel="stylesheet">
+        <![endif]-->
+<!--[if lt IE 9]>
+            <script src="js/jquery.placeholder.js"></script>
+            <script src="js/script_ie.js"></script>
+        <![endif]-->
+		<script>
+function _(id){ return document.getElementById(id); }
+function submitForm(){
+	_("mybtn").disabled = true;
+	_("status").innerHTML = 'please wait ...';
+	var formdata = new FormData();
+	formdata.append( "n", _("n").value );
+	formdata.append( "e", _("e").value );
+	formdata.append( "p", _("p").value );
+	formdata.append( "m", _("m").value );
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", "php/example_parser.php" );
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+				_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				_("mybtn").disabled = false;
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+</script>
+</head>
+<body class="w1170">
+<!-- Marine Content Wrapper -->
+<div id="marine-content-wrapper">
+	<!-- SIDEMENU -->
+	<aside id="sidemenu" class="dark hidden-menu">
+	<div id="sidemenu-button">
+		<div>
+			<span></span><span></span><span></span>
+		</div>
+		<span>Menu</span>
+	</div>
+	<div id="sidemenu-wrapper">
+		<div class="logo">
+			<a href='#' title="techneplus" rel="home"><img src="img/free_w.png" alt="Techneplus"></a>
+		</div>
+		<div id="main-nav-button">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<!-- Main Navigation -->
+		<nav id="side-nav" class="menu-one-page-menu-container">
+		<ul id="side-nav-menu" class="menu">
+			<li><a href="#aboutme">About Me</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#contacts">Contacts</a></li>
+			<li><a href="#resume">Resume</a></li>
+			
+		</ul>
+		</nav>
+		<!-- /Main Navigation -->
+		<div class="sidemenu-tweets">
+			<div class="icon">
+				<i class="icons icon-twitter"></i>
+			</div>
+			<p>
+				<a href="#" target="_blank">techneplus</a> Check out What I Do?  <a href="#" target="_blank">http://techneplus.com</a>
+			</p>
+			<span class="date">over a year ago</span>
+		</div>
+		<div class="sidemenu-footer">
+			<ul class="social-media">
+				<li><a target="_blank" href="#"><i class="icon-facebook"></i></a>
+				</li>
+				<li><a target="_blank" href="#"><i class="icon-skype"></i></a>
+				</li>
+				<li><a target="_blank" href="#"><i class="icon-twitter"></i></a>
+				</li>
+			</ul>
+			<p class="copyright">
+				 ©2016 Techneplus. All Rights Reserved
+			</p>
+		</div>
+	</div>
+	</aside>
+	<!-- /SIDEMENU -->
+	<!-- Main Content -->
+	<section id="main-content">
+<!-- Container -->
+<div class="container">
+</div>
+<section id="slider">
+		<div class="container">
+			<!-- START REVOLUTION SLIDER 4.5.95 fullscreen mode -->
+			<div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container" style="background-color:#eee;padding:0px;">
+				<div id="rev_slider_1_1" class="rev_slider fullscreenbanner" style="display:none;">
+				<ul>	<!-- SLIDE  -->
+					<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-thumb="img/rs-images/freelancer-thumb1.jpg" data-saveperformance="off" data-title="Intro Slide">
+						<!-- MAIN IMAGE -->
+						<img src="img/rs-images/dummy.png" alt="onepagebg" data-lazyload="img/rs-images/onepagebg.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<!-- LAYERS -->
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption lft customout rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="273" 
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="1600" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 2;"><img src="img/rs-images/dummy.png" alt="techneplus" data-lazyload="img/rs-images/Rectangle-13.png">
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption big_telegraficoregular skewfromrightshort tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="349" data-speed="500" data-start="1100" data-easing="Power3.easeOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">WEB DEVELOPER
+						</div>
+						<!-- LAYER NR. 3 -->
+						<div class="tp-caption medium_telegraficoregular skewfromrightshort tp-resizeme rs-parallaxlevel-0 customin customout" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:-100;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-x="center" data-hoffset="0" data-y="169" data-speed="500" data-start="2100" data-easing="Power3.easeInOut" data-splitin="chars" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">I'M A
+						</div>
+						<!-- LAYER NR. 4 -->
+						<div class="tp-caption italic_littlesub sfb tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="453" data-speed="600" data-start="2700" data-easing="Power1.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+							<div style="font-size: 25px; color: #ffffff; background-color:  #1E90FF" class="tp-layer-inner-rotation italic_littlesub  rs-slideloop" data-easing="Power3.easeInOut" data-speed="2" data-xs="0" data-xe="0" data-ys="0" data-ye="0" >&quot;Innovation needs to be part of our culture. Consumers are transforming faster than we are,<br> and if we don't catch up, we're in trouble.&quot; <br> <b>Ian Schafer</b>
+							</div>
+						</div>
+						<!-- LAYER NR. 5 -->
+						<div class="tp-caption arrowicon tp-fade customout tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="564" 
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="3300" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='button biggest' style="color: #ffffff;background-color: #1E90FF; border:2px solid #ffffff"><i class="icons icon-info-circled-alt" style="font-size: 15px;margin-center: 5px; color: #ffffff;"></i>VIEW MORE</a>
+						</div>
+					</li>
+					<!-- SLIDE  -->
+					<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-thumb="img/rs-images/freelancer-thumb2.jpg" data-saveperformance="off" data-title="Intro Slide">
+						<!-- MAIN IMAGE -->
+						<img src="img/rs-images/dummy.png" alt="onepagebg2" data-lazyload="img/rs-images/onepagebg2.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<!-- LAYERS -->
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption lft customout rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="273" 
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="1600" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 2;"><img src="img/rs-images/dummy.png" alt="techneplus" data-lazyload="img/rs-images/Rectangle-13.png">
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption big_telegraficoregular skewfromrightshort tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="349" data-speed="500" data-start="1100" data-easing="Power3.easeOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">GRAPHICS DESIGNER
+						</div>
+						<!-- LAYER NR. 3 -->
+						<div class="tp-caption medium_telegraficoregular skewfromrightshort tp-resizeme rs-parallaxlevel-0 customin customout" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:-100;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-x="center" data-hoffset="0" data-y="169" data-speed="500" data-start="2100" data-easing="Power3.easeInOut" data-splitin="chars" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">I'M A
+						</div>
+						<!-- LAYER NR. 4 -->
+						<div class="tp-caption italic_littlesub sfb tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="453" data-speed="600" data-start="2700" data-easing="Power1.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+								<div style="font-size: 25px; color: #ffffff; background-color:  #1E90FF" class="tp-layer-inner-rotation italic_littlesub  rs-slideloop" data-easing="Power3.easeInOut" data-speed="2" data-xs="0" data-xe="0" data-ys="0" data-ye="0"> &quot;Innovation needs to be part of our culture. Consumers are transforming faster than we are,<br> and if we don't catch up, we're in trouble.&quot; <br> <b>Ian Schafer</b>
+								</div>
+						</div>
+						<!-- LAYER NR. 5 -->
+						<div class="tp-caption arrowicon tp-fade customout tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="541" 
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="3300" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='button biggest' style="color: #FFFFFF;background-color: #1E90FF; border:2px solid #FFFFFF"><i class="icons icon-info-circled-alt" style="font-size: 15px;margin-center: 5px; color: #1E90FF;"></i>VIEW MORE</a>
+						</div>
+					</li>
+					<!-- SLIDE  -->
+					<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-thumb="img/rs-images/freelancer-thumb3.jpg" data-saveperformance="off" data-title="Intro Slide">
+						<!-- MAIN IMAGE -->
+						<img src="img/rs-images/dummy.png" alt="onepagebg3" data-lazyload="img/rs-images/onepagebg3.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+						<!-- LAYERS -->
+						<!-- LAYER NR. 1 -->
+						<div class="tp-caption lft customout rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="273" 
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="700" data-start="1600" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 2;"><img src="img/rs-images/dummy.png" alt="techneplus" data-lazyload="img/rs-images/Rectangle-13.png">
+						</div>
+						<!-- LAYER NR. 2 -->
+						<div class="tp-caption big_telegraficoregular skewfromrightshort tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="349" data-speed="500" data-start="1100" data-easing="Power3.easeOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">DIGITAL MARKETER
+						</div>
+						<!-- LAYER NR. 3 -->
+						<div class="tp-caption medium_telegraficoregular skewfromrightshort tp-resizeme rs-parallaxlevel-0 customin customout" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:-100;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-x="center" data-hoffset="0" data-y="169" data-speed="500" data-start="2100" data-easing="Power3.easeInOut" data-splitin="chars" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">I'M A
+						</div>
+						<!-- LAYER NR. 4 -->
+						<div class="tp-caption italic_littlesub sfb tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="453" data-speed="600" data-start="2700" data-easing="Power1.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+								<div style="font-size: 25px; color: #ffffff; background-color:  #1E90FF" class="tp-layer-inner-rotation italic_littlesub  rs-slideloop" data-easing="Power3.easeInOut" data-speed="2" data-xs="0" data-xe="0" data-ys="0" data-ye="0">&quot;Innovation needs to be part of our culture. Consumers are transforming faster than we are,<br> and if we don't catch up, we're in trouble.&quot; <br> <b>Ian Schafer</b> 
+								</div>
+						</div>
+						<!-- LAYER NR. 5 -->
+						<div class="tp-caption arrowicon tp-fade customout tp-resizeme rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="541" 
+							data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="800" data-start="3300" data-easing="Quad.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='button biggest' style="color: #ffffff;background-color: #1E90FF; border:2px solid #ffffff"><i class="icons icon-info-circled-alt" style="font-size: 15px;margin-center: 5px; color: #ffffff;"></i>VIEW MORE</a>
+						</div>
+					</li>
+				</ul>
+				<div class="tp-bannertimer"></div>	</div>
+			</div>
+			<script type="text/javascript">
+
+
+			/******************************************
+				-	PREPARE PLACEHOLDER FOR SLIDER	-
+			******************************************/
+			var setREVStartSize = function() {
+				var	tpopt = new Object();
+					tpopt.startwidth = 1170;
+					tpopt.startheight = 780;
+					tpopt.container = jQuery('#rev_slider_1_1');
+					tpopt.fullScreen = "on";
+					tpopt.forceFullWidth="off";
+					tpopt.container.closest(".rev_slider_wrapper").css({height:tpopt.container.height()});tpopt.width=parseInt(tpopt.container.width(),0);tpopt.height=parseInt(tpopt.container.height(),0);tpopt.bw=tpopt.width/tpopt.startwidth;tpopt.bh=tpopt.height/tpopt.startheight;if(tpopt.bh>tpopt.bw)tpopt.bh=tpopt.bw;if(tpopt.bh<tpopt.bw)tpopt.bw=tpopt.bh;if(tpopt.bw<tpopt.bh)tpopt.bh=tpopt.bw;if(tpopt.bh>1){tpopt.bw=1;tpopt.bh=1}if(tpopt.bw>1){tpopt.bw=1;tpopt.bh=1}tpopt.height=Math.round(tpopt.startheight*(tpopt.width/tpopt.startwidth));if(tpopt.height>tpopt.startheight&&tpopt.autoHeight!="on")tpopt.height=tpopt.startheight;if(tpopt.fullScreen=="on"){tpopt.height=tpopt.bw*tpopt.startheight;var cow=tpopt.container.parent().width();var coh=jQuery(window).height();if(tpopt.fullScreenOffsetContainer!=undefined){try{var offcontainers=tpopt.fullScreenOffsetContainer.split(",");jQuery.each(offcontainers,function(e,t){coh=coh-jQuery(t).outerHeight(true);if(coh<tpopt.minFullScreenHeight)coh=tpopt.minFullScreenHeight})}catch(e){}}tpopt.container.parent().height(coh);tpopt.container.height(coh);tpopt.container.closest(".rev_slider_wrapper").height(coh);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);tpopt.container.css({height:"100%"});tpopt.height=coh;}else{tpopt.container.height(tpopt.height);tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);}
+			};
+			/* CALL PLACEHOLDER */
+			setREVStartSize();
+			var tpj=jQuery;
+			tpj.noConflict();
+			var revapi1;
+			tpj(document).ready(function() {
+				if(tpj('#rev_slider_1_1').revolution == undefined)
+					revslider_showDoubleJqueryError('#rev_slider_1_1');
+				else
+				   revapi1 = tpj('#rev_slider_1_1').show().revolution(
+					{
+						dottedOverlay:"none",
+						delay:16000,
+						startwidth:1170,
+						startheight:780,
+						hideThumbs:200,
+						thumbWidth:100,
+						thumbHeight:50,
+						thumbAmount:3,
+						navigationType:"none",
+						navigationArrows:"solo",
+						navigationStyle:"preview4",
+						touchenabled:"on",
+						onHoverStop:"on",
+						swipe_velocity: 0.7,
+						swipe_min_touches: 1,
+						swipe_max_touches: 1,
+						drag_block_vertical: false,
+						parallax:"mouse",
+						parallaxBgFreeze:"on",
+						parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+						keyboardNavigation:"off",
+						navigationHAlign:"center",
+						navigationVAlign:"bottom",
+						navigationHOffset:0,
+						navigationVOffset:20,
+						soloArrowLeftHalign:"left",
+						soloArrowLeftValign:"center",
+						soloArrowLeftHOffset:20,
+						soloArrowLeftVOffset:0,
+						soloArrowRightHalign:"right",
+						soloArrowRightValign:"center",
+						soloArrowRightHOffset:20,
+						soloArrowRightVOffset:0,
+						shadow:0,
+						fullWidth:"off",
+						fullScreen:"on",
+						spinner:"spinner4",
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+						shuffle:"off",
+						forceFullWidth:"off",
+						fullScreenAlignForce:"off",
+						minFullScreenHeight:"100",
+						hideThumbsOnMobile:"off",
+						hideNavDelayOnMobile:1500,
+						hideBulletsOnMobile:"off",
+						hideArrowsOnMobile:"off",
+						hideThumbsUnderResolution:0,
+						fullScreenOffsetContainer: ".headerwrap, .headertopwrap",
+						fullScreenOffset: "",
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						startWithSlide:0
+					});
+				});	/*ready*/
+			</script>
+			<!-- END REVOLUTION SLIDER -->
+			<script>
+				/* Fix The Revolution Slider Loading Height issue */
+				jQuery(document).ready(function($){
+					$('.rev_slider_wrapper').each(function(){
+						$(this).css('height','');
+						var revStartHeight = parseInt($('>.rev_slider', this).css('height'));
+						$(this).height(revStartHeight);
+						$(this).parents('#slider').height(revStartHeight);
+						
+						$(window).load(function(){
+							$('#slider').css('height','');
+						});
+					});
+				});
+			</script>
+		</div>
+    </section>
+<div class="container">
+	<div class="row">
+		<section class="col-lg-12 col-md-12 col-sm-12 small-padding">
+		<div class="row row-fluid">
+			<div class="col-sm-12 column_container">
+				<div id="aboutme">
+				</div>
+				<div class="full_bg full-width-bg marine-full-bg" data-animation="">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<h1 class="special-text marine-special-h1" data-animation=""><span class="marine-special-text-span">Welcome!</span> I’m James Osinachi</h1>
+								
+								
+							<div class="col-lg-9 col-md-9 col-sm-6">
+								<img src="img/user.png" class=" img-responsive alignnone dont_scale wow animated fadeIn" data-animation="fadeIn" alt="techneplus">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-6">
+								<img src="img/hire-me.png" class=" img-responsive alignnone dont_scale " data-animation="" alt="techneplus">
+							</div>
+							<div class="clearfix">
+							</div>
+							<h6 class="special-text marine-special-text-h6" data-animation=""><em>I design beautiful graphic, compelling website with intuitive interface.</em>.</h6>
+							<h6 class="special-text marine-special-text-h6-1" data-animation="">I specialize in graphics design, Digital marketing  &amp; Web development<b><p> <b><h1>What I Offer</b></h1></P>
+							<div class=" style1">
+								<p>
+									 Responsive Web Design
+								</p>
+								<div class="progressbar " data-percent="68">
+									<div class="progress-width">
+									</div>
+									<span class="progress-percent"></span>
+								</div>
+							</div>
+							<div class=" style1">
+								<p>
+									 Graphic Design
+								</p>
+								<div class="progressbar " data-percent="86">
+									<div class="progress-width">
+									</div>
+									<span class="progress-percent"></span>
+								</div>
+							</div>
+							<div class=" style1">
+								<p>
+									 Digital Marketing
+								</p>
+								<div class="progressbar " data-percent="40">
+									<div class="progress-width">
+									</div>
+									<span class="progress-percent"></span>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="clearfix">
+					</div>
+				</div>
+			</div>
+			<div class="row row-fluid ">
+				<div class="col-sm-12 column column_container">
+					<div id="projects">
+					</div>
+					<div class="full_bg full-width-bg marine-full_bg" data-animation="">
+						<h2 class="special-text marine-special-projects-h2" data-animation=""><span class="red">My</span> Works</h2>
+						<h4 class="special-text marine-special-projects-h4" data-animation=""><em>Take your time to go through some of my work.</em><br/>
+						<em> I hope you love them and would want I work for you</em></h4>
+						<!-- Full Width Projects -->
+						<div class="align-center">
+							<h2 class="big"> </h2>
+							<p>
+							</p>
+							<div class="sorting-tags style2">
+								<div class="filter" data-filter="all">
+									 All
+								</div>
+								<div class="filter" data-filter=".category-web">
+									 Web Design
+								</div>
+								<div class="filter" data-filter=".category-graphic-design">
+									 Graphic Design
+								</div>
+								<div class="filter" data-filter=".category-print-design">
+									 Digital Marketing
+								</div>
+								
+							</div>
+							<!-- Full Width Projects -->
+							<div class="full-width full-width-portfolio projects-container">
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-web">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Project Title</h4>
+														<span>Web Design</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-graphic-design">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Business Cards</h4>
+														<span>Graphic Design</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-print-design">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Project Title</h4>
+														<span>Digital Marketing</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-web">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Project Title</h4>
+														<span>Web Design</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-graphic-design">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Flyers</h4>
+														<span>Graphic Design</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-print-design">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Project Title</h4>
+														<span>Digital Marketing</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-web">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Project Title</h4>
+														<span>Web Design</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+								<!-- Project -->
+								<div class="col-lg-3 col-md-3 col-sm-6 mix category-graphic-design">
+									<div class="project style2">
+										<div class="project-image">
+											<img src="" alt="Project Title"/>
+											<div class="project-hover">
+												<div class="project-description">
+													<div>
+														<h4>Logo &amp; Infographics</h4>
+														<span>Graphic Design</span>
+													</div>
+												</div>
+												<div class="project-buttons">
+													<a class="link-icon" href="#"></a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /Project -->
+							</div>
+							<div class="clearfix">
+							</div>
+							<!-- Full Width Projects -->
+							<div class="clearfix">
+							</div>
+						</div>
+					</div>
+					
+					<div class="row row-fluid">
+						<div class="col-sm-12 column_container">
+							<div id="services">
+							</div>
+							<div class="full_bg full-width-bg marine-full_bg-services " data-animation="">
+								<h2 class="special-text marine-special-services-h2" data-animation=""><span class="red">What</span> I'll Do For You</h2>
+								<h4 class="special-text marine-special-services-h4" data-animation=""><em>I will be providing you the best of services. </em><br/>
+								<em> Be rest assured that you will be getting the best from me </em></h4>
+								<div class="col-lg-3 col-md-3 col-sm-6">
+									<img src="img/writing.png" class="aligncenter dont_scale wow animated fadeInDown" data-animation="fadeInDown" alt="">
+									<h3 class="special-text marine-special-services-h3" data-animation="">SEO</h3>
+									<h3 class="special-text marine-special-services-h3-1" data-animation="">Your site would appear top on search engine </h3>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6">
+									<img src="img/coding.png" class="aligncenter dont_scale wow animated fadeInDown" data-animation="fadeInDown" alt="">
+									<h3 class="special-text marine-special-services-h3" data-animation="">Perfect Coding</h3>
+									<h3 class="special-text marine-special-services-h3-1" data-animation="">Neat coding and well documented </h3>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6">
+									<img src="img/customization.png" class="aligncenter dont_scale wow animated fadeInDown" data-animation="fadeInDown" alt="">
+									<h3 class="special-text marine-special-services-h3" data-animation="">Customization</h3>
+									<h3 class="special-text marine-special-services-h3-1" data-animation="">My design are made to suit every business/client need </h3>
+								</div>
+								<div class="col-lg-3 col-md-3 col-sm-6">
+									<img src="img/ffith.png" class="aligncenter dont_scale wow animated fadeInDown" data-animation="fadeInDown" alt="">
+									<h3 class="special-text marine-special-services-h3" data-animation="">Support Ninja</h3>
+									<h3 class="special-text marine-special-services-h3-1" data-animation="">You will get 100% support and dedication from me. </h3>
+								</div>
+								<div class="clearfix">
+								</div>
+								<p class="align-center margin-top80">
+									<a class="button biggest variant2 red-button" data-animation="" href="#contacts" "><i class="icons icon-user-outline"></i>HIRE ME!</a>
+									<div class="clearfix">
+									</div>
+								
+								
+									<div class="col-sm-12 column_container ">
+										<div id="contacts">
+										</div>
+										<div class="sc-map full last-page">
+											<div class="sc-map-container">
+												<div>
+													<div class="wpgmappity_container" id="wpgmappity-map-1">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		</div>
+	</div>
+<!-- /Container -->
+</section>
+	<!-- /Main Content -->
+</div>
+<!-- /Marine Conten Inner -->
+<!-- Footer -->
+<footer id="footer" class="footer-2">
+<!-- Main Footer -->
+<div id="main-footer" class="smallest-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div id="text-2" class="widget widget_text">
+					<div class="textwidget">
+						<img src="img/logo.png" alt="logo">
+						<p>
+							 ©2016 Techneplus. All Rights Reserved
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- Contact form -->
+			
+			<div class="col-lg-6 col-md-6 col-sm-6 footer-contact-form">
+				<form id="my_form" onsubmit="submitForm(); return false;">
+					
+					<h3 class="special-h3"><strong><span>Contact</span> Me</strong></h3>
+					<div class="iconic-input">
+						<input type="text" id="n" placeholder="Name*" value="" required>
+						<i class="icons icon-user-1"></i>
+					</div>
+					<div class="iconic-input">
+						<input type="text" id="e" placeholder="Email*" value="" required>
+						<i class="icons icon-mail-4"></i>
+					</div>
+					<div class="iconic-input">
+					<input type="text" id="p" placeholder="Phone*" value="" required>
+						<i class="icons icon-mobile-4"></i>
+					</div>
+					<textarea rows="6" id="m" placeholder="Message*" required></textarea>
+					<input class="unfilled big black" id="mybtn" type="submit" value="SEND MESSAGE"><span id="status"></span>
+				</form>
+			</div>
+			<!-- /Contact form -->
+			<div class="col-lg-3 col-md-3 col-sm-3">
+				<div id="text-3" class="widget widget_text">
+					<div class="textwidget">
+						<ul class="iconic-list">
+							<li>
+							<i class="icons icon-location-7"></i>
+							Lagos<br>
+							Nigeria </li>
+							<li>
+							<i class="icons icon-mobile-6"></i>
+							Phone: (234) 80-6505-3056
+							<li>
+							<i class="icons icon-mail-7"></i>
+							support@techneplus.com </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Lower Footer -->
+<div id="lower-footer">
+	<div class="container">
+		<span class="copyright">©2016 Techneplus. All Rights Reserved</span>
+	</div>
+</div>
+<!-- /Lower Footer -->
+</footer>
+<!-- /Main Footer -->
+<!-- /Marine Content Wrapper -->
+<!-- JavaScript -->
+<script type='text/javascript' src='js/bootstrap.min.js'></script>
+<script type='text/javascript' src='js/jquery-ui.min.js'></script>
+<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='js/jquery.mousewheel.min.js'></script>
+<script type='text/javascript' src='js/SmoothScroll.min.js'></script>
+<script type='text/javascript' src='js/prettyphoto/js/jquery.prettyPhoto.js'></script>
+<script type='text/javascript' src='js/modernizr.js'></script>
+<script type='text/javascript' src='js/wow.min.js'></script>
+<script type='text/javascript' src='js/jquery.sharre.min.js'></script>
+<script type='text/javascript' src='js/jquery.flexslider-min.js'></script>
+<script type='text/javascript' src='js/jquery.knob.js'></script>
+<script type='text/javascript' src='js/jquery.mixitup.min.js'></script>
+<script type='text/javascript' src='js/masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='js/jquery.masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='js/jquery.fitvids.js'></script>
+<script type='text/javascript' src='js/perfect-scrollbar-0.4.10.with-mousewheel.min.js'></script>
+<script type='text/javascript' src='js/jquery.nouislider.min.js'></script>
+<script type='text/javascript' src='js/jquery.validity.min.js'></script>
+<script type='text/javascript' src='js/tweetie.min.js'></script>
+<script type='text/javascript' src='js/script.js'></script>
+<script type='text/javascript' src='js/rs-plugin/js/jquery.themepunch.enablelog.js'></script>
+<script type='text/javascript' src='js/rs-plugin/js/jquery.themepunch.revolution.js'></script>
+<script type='text/javascript' src='js/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>
+<script type='text/javascript' src='js/rs-plugin/js/jquery.themepunch.tools.min.js'></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery('.tp-banner').show().revolution(
+	{
+		dottedOverlay:"none",
+		delay:16000,
+		startwidth:1170,
+		startheight:700,
+		hideThumbs:200,
+		thumbWidth:100,
+		thumbHeight:50,
+		thumbAmount:5,
+		navigationType:"bullet",
+		navigationArrows:"solo",
+		navigationStyle:"preview2",
+		touchenabled:"on",
+		onHoverStop:"on",
+		swipe_velocity: 0.7,
+		swipe_min_touches: 1,
+		swipe_max_touches: 1,
+		drag_block_vertical: false,
+								parallax:"mouse",
+		parallaxBgFreeze:"on",
+		parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+		keyboardNavigation:"off",
+		navigationHAlign:"center",
+		navigationVAlign:"bottom",
+		navigationHOffset:0,
+		navigationVOffset:20,
+		soloArrowLeftHalign:"left",
+		soloArrowLeftValign:"center",
+		soloArrowLeftHOffset:20,
+		soloArrowLeftVOffset:0,
+		soloArrowRightHalign:"right",
+		soloArrowRightValign:"center",
+		soloArrowRightHOffset:20,
+		soloArrowRightVOffset:0,
+		shadow:0,
+		fullWidth:"on",
+		fullScreen:"off",
+		spinner:"spinner4",
+		stopLoop:"off",
+		stopAfterLoops:-1,
+		stopAtSlide:-1,
+		shuffle:"off",
+		autoHeight:"off",						
+		forceFullWidth:"off",						
+		hideThumbsOnMobile:"off",
+		hideNavDelayOnMobile:1500,						
+		hideBulletsOnMobile:"off",
+		hideArrowsOnMobile:"off",
+		hideThumbsUnderResolution:0,
+		hideSliderAtLimit:0,
+		hideCaptionAtLimit:0,
+		hideAllCaptionAtLilmit:0,
+		startWithSlide:0,
+		videoJsPath:"rs-plugin/videojs/",
+		fullScreenOffsetContainer: ""	
+	});
+});	//ready
+</script>
+</body>
+</html>
